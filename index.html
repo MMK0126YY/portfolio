@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>お酒飲む人の話</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 </head>
 
@@ -34,6 +35,21 @@
       <li>ミルク割り</li>
     </ul>
   </section>
+
+  <div id="example">
+    <input v-model="message" placeholder="edit me">
+    <p>あなたのお名前は？: {{ message }}</p>
+
+  </div>
+
+  <script type="text/javascript">
+    var vm = new Vue({
+      el: '#example',
+      data: {
+        message: 'お名前は？'
+      },
+    })
+  </script>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134171009-1"></script>
