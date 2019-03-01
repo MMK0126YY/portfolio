@@ -33,14 +33,35 @@
       <li>-195℃(さくらんぼ)</li>
       <li>カルピスサワー</li>
       <li>ミルク割り</li>
+      <li>スカイブルー</li>
     </ul>
   </section>
 
 <h1>お酒アンケート</h1>
 
+
+<h2>あなたの性別は</h2>
+  <input type="radio" id="男" value="男" v-model="picked">
+<label for="男">男</label>
+<br>
+<input type="radio" id="女" value="女" v-model="picked">
+<label for="女">女</label>
+<br>
+<span>Picked: {{ picked }}</span>
+
+<h2>どこでお酒を買いますか？</h2>
   <div id="example">
-    <p>あなたのお名前は？: {{ message }}</p>
-    <input v-model="message" placeholder="edit me">
+    <div id='example-3'>
+  <input type="checkbox" id="スーパー" value="スーパー" v-model="checkedNames">
+  <label for="スーパー">スーパー</label>
+  <input type="checkbox" id="コンビニ" value="コンビニ" v-model="checkedNames">
+  <label for="コンビニ">コンビニ</label>
+  <input type="checkbox" id="酒屋" value="酒屋" v-model="checkedNames">
+  <label for="酒屋">酒屋</label>
+  <input type="checkbox" id="その他" value="その他" v-model="checkedNames">
+  <label for="その他">その他</label>
+  <br>
+  <span>Checked names: {{ checkedNames }}</span>
   </div>
 
   <script type="text/javascript">
@@ -50,6 +71,7 @@
         message: 'お名前は？'
       },
     })
+
   </script>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
