@@ -43,13 +43,12 @@
 <h1>お酒アンケート</h1>
 
 <h2>あなたは成人してますか？</h2>
-  <input type="radio" id="yes" value="はい" v-model="picked">
-<label for="男">はい</label>
+  <input type="radio" id="yes" value="成人" v-model="picked">
+<label for="yes">はい</label>
 <br>
-<input type="radio" id="no" value="いいえ" v-model="picked">
-<label for="女">いいえ</label>
+<input type="radio" id="no" value="未成年" v-model="picked">
+<label for="no">いいえ</label>
 <br>
-<span>Picked: {{ picked }}</span>
 
 
 
@@ -60,7 +59,7 @@
 <input type="radio" id="女" value="女" v-model="picked1">
 <label for="女">女</label>
 <br>
-<span>Picked: {{ picked1 }}</span>
+
 
 <h2>どこでお酒を買いますか？</h2>
 
@@ -73,7 +72,15 @@
   <input type="checkbox" id="その他" value="その他" v-model="checkedNames">
   <label for="その他">その他</label>
   <br>
-  <span>Checked names: {{ checkedNames }}</span>
+  <br>
+  <br>
+  <br>
+
+
+
+  <span>ここでお酒を買います -> {{ checkedNames }}</span>
+  <br>
+  <img :src=image_src alt="">
 </div>
 
   <script type="text/javascript">
@@ -84,6 +91,13 @@
         picked1: '',
         checkedNames: []
       },
+      computed: {
+        // 算出 getter 関数
+        image_src: function () {
+          // `this` は vm インスタンスを指します
+          return this.picked + "_" + this.picked1 + ".png"
+        }
+}
     })
 
   </script>
