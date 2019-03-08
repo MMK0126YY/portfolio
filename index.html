@@ -22,6 +22,7 @@
       <li>まずは自分で限度を決めよう</li>
       <li>特に女性の方は男の人に持ち帰られないように</li>
       <li>飲みすぎたら自己責任</li>　
+      <li>飲酒運転ダメ絶対</li>
 
     </ul>
   </section>
@@ -71,11 +72,19 @@
   <label for="酒屋">酒屋</label>
   <input type="checkbox" id="その他" value="その他" v-model="checkedNames">
   <label for="その他">その他</label>
-  <br>
-  <br>
-  <br>
-  <br>
 
+
+  <h2>お酒の頻度はどれくらいですか？</h2>
+  <div id='example-3'>
+    <input type="checkbox" id="週に1から2回" value="週に1から2回" v-model="checkedNames">
+    <label for="jack">週に1から2回</label>
+    <input type="checkbox" id="週に3から4回" value="週に3から4回" v-model="checkedNames">
+    <label for="john">週に3から4回</label>
+    <input type="checkbox" id="　ほぼ毎日" value="ほぼ毎日" v-model="checkedNames">
+    <label for="mike">ほぼ毎日</label>
+    <br>
+
+  </div>
 
 
   <span>ここでお酒を買います -> {{ checkedNames }}</span>
